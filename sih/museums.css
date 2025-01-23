@@ -1,0 +1,206 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #112031; /* Dark background similar to the image */
+  color: #fffff0;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.navbar {
+  width: 50px;
+  background-color: rgba(21, 45, 53, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+.navbar-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #345b63;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.glassmorphism-bg {
+  position: fixed;
+  top: 0;
+  left: 50px;
+  right: 0;
+  bottom: 0;
+  background-image: url("img/pot_bg2.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.navbar-icon img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  filter: invert(1);
+}
+
+.profile-icon {
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.main-content {
+  flex: 2;
+  margin: 20px 20px 20px 70px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  overflow-y: auto;
+  color: #fffff0;
+  z-index: 2;
+}
+
+.museums-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.museum-card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  max-width: 250px;
+}
+
+.museum-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.museum-card-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.museum-card-content {
+  margin-top: 10px;
+}
+
+.museum-details {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+
+.museum-details-content {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 80%;
+  max-height: 80%;
+  overflow-y: auto;
+  position: relative;
+}
+
+.museum-details-content .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.museum-details-content img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.slot-info {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.book-now-btn {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.book-now-btn:hover {
+  background-color: #45a049;
+}
+
+.book-now-btn:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+.hidden {
+  display: none;
+}
+
+.book-ticket-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.book-ticket-btn:hover {
+  background-color: #0056b3;
+}

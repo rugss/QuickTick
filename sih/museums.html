@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuicTick</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="museums.css" />
+    <link rel="shortcut icon" href="img/icon2_bg.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <div class="navbar-icon">
+          <img src="img/home.png" alt="home icon" id="home-icon" />
+        </div>
+        <div class="navbar-icon">
+          <img src="img/app.png" alt="menu icon" />
+        </div>
+        <div class="navbar-icon profile-icon">
+          <img src="img/user.png" alt="account icon" />
+        </div>
+      </nav>
+      <div class="glassmorphism-bg"></div>
+      <div class="main-content">
+        <h2 style="color: #fff; margin-bottom: 20px">Museums</h2>
+        <div class="museums-grid"></div>
+
+        <div id="museum-details" class="museum-details hidden">
+          <div class="museum-details-content">
+            <span class="close" onclick="hideDetails()">×</span>
+            <img
+              id="museum-image"
+              src="img/museum-placeholder.jpg"
+              alt="Museum Image"
+            />
+            <h2 id="museum-title"></h2>
+            <p id="museum-description"></p>
+            <div id="museum-slots"></div>
+          </div>
+        </div>
+      </div>
+      <div class="chat-section">
+        <div id="chat-messages"></div>
+        <div id="waiting-character" class="message bot-message">
+          <img
+            style="height: 200px; width: 200px"
+            src="img/idle.gif"
+            alt="Cartoon Character"
+            style="width: 50px; height: 50px"
+          />
+          <span>Can I help you?</span>
+        </div>
+        <div class="chat-input">
+          <div class="send-icon" onclick="sendMessage()">
+            <img src="img/send.png" alt="Send" />
+          </div>
+          <input
+            type="text"
+            id="user-input"
+            placeholder="Type your message..."
+          />
+        </div>
+      </div>
+    </div>
+    <div id="loader" class="hidden">
+      <div id="box"></div>
+      <div id="hill"></div>
+    </div>
+    <script src="museums.js"></script>
+  </body>
+</html>

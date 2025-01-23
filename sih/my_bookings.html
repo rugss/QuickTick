@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuicTick</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="booking.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <link rel="shortcut icon" href="img/icon2_bg.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <div class="navbar-icon">
+          <img src="img/home.png" alt="home icon" id="home-icon" />
+        </div>
+        <div class="navbar-icon">
+          <img src="img/app.png" alt="menu icon" />
+        </div>
+        <div class="navbar-icon profile-icon">
+          <img src="img/user.png" alt="account icon" />
+        </div>
+      </nav>
+      <div class="glassmorphism-bg"></div>
+      <div class="main-content">
+        <h1>My Bookings</h1>
+        <div id="bookings-grid" class="bookings-grid">
+          <!-- Booking cards will be dynamically inserted here -->
+        </div>
+      </div>
+      <div class="chat-section">
+        <div id="chat-messages"></div>
+        <div id="waiting-character" class="message bot-message">
+          <img
+            style="height: 200px; width: 200px"
+            src="img/idle.gif"
+            alt="Cartoon Character"
+          />
+          <span>Can I help you?</span>
+        </div>
+        <div class="chat-input">
+          <div class="send-icon" onclick="sendMessage()">
+            <img src="img/send.png" alt="Send" />
+          </div>
+          <input
+            type="text"
+            id="user-input"
+            placeholder="Type your message..."
+          />
+        </div>
+      </div>
+    </div>
+    <div id="loader" class="hidden">
+      <div id="box"></div>
+      <div id="hill"></div>
+    </div>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="script.js" type="text/babel"></script>
+    <script src="my_bookings.js"></script>
+  </body>
+</html>
